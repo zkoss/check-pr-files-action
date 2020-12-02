@@ -1,0 +1,19 @@
+{
+  "name": "check-pr-files",
+  "version": "1.0.0",
+  "description": "Check a PR contains necessary files",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && ncc build dist/index.js -o ./dist"
+  },
+  "author": "@scribetw",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.25.1",
+    "typescript": "^4.1.2"
+  }
+}

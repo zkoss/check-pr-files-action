@@ -1,0 +1,19 @@
+name: 'Check-PR-Files'
+author: '@scribetw'
+description: 'Check a PR contains necessary files'
+inputs:
+  files:
+    description: 'A list of files to check.'
+    required: true
+    default: |
+      zktest/src/archive/test2/config.properties
+      zkdoc/release-note
+  token:
+    description: 'The GITHUB_TOKEN used to add warning to the PR.'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'check-circle'
+  color: 'blue'
