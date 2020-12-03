@@ -31,7 +31,7 @@ A `GITHUB_TOKEN` used to add warning to the PR.
 ## Example usage
 
 ``` yml
-uses: ./.github/actions/check-pr-files
+uses: zkoss/check-pr-files-action@v1
 with:
   files: |
     README.md
