@@ -6,7 +6,7 @@ inputs:
     description: 'A list of files to check.'
     required: true
     default: |
-      zktest/src/archive/test2/config.properties
+      zktest/src/main/webapp/test2/config.properties
       zkdoc/release-note
   token:
     description: 'The GITHUB_TOKEN used to add warning to the PR.'

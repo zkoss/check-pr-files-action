@@ -61,12 +61,10 @@ function run() {
                 _actions_core__WEBPACK_IMPORTED_MODULE_0__.info('Ignored a refine PR.');
                 return;
             }
-            _actions_core__WEBPACK_IMPORTED_MODULE_0__.setSecret('token');
             const token = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('token', { required: true });
             const octokit = _actions_github__WEBPACK_IMPORTED_MODULE_1__.getOctokit(token);
             const changedFiles = yield getChangedFiles(octokit, pr.number);
             const files = getInputAsList('files', { required: true });
-            _actions_core__WEBPACK_IMPORTED_MODULE_0__.info(`Checked files: ${files}`);
             const labels = [];
             for (let file of files) {
                 let included = changedFiles.includes(file);
