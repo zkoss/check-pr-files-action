@@ -65,6 +65,15 @@ async function run() {
       }
     }
 
+    // Check org/zkoss/zul package whether has changed or not
+    for (let file of changedFiles) {
+      if (file.includes('org/zkoss/zul')) {
+        labels.push(`need-zul.xsd`);
+        labels.push(`need-change-stateless-as-well`);
+        break;
+      }
+    }
+
     if (labels.length > 0) {
       core.info(`Will add labels: ${labels}`);
       octokit.issues.addLabels({

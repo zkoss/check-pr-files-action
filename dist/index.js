@@ -73,6 +73,14 @@ function run() {
                     labels.push(`need-${getFileNameOnly(file)}`);
                 }
             }
+            // Check org/zkoss/zul package whether has changed or not
+            for (let file of changedFiles) {
+                if (file.includes('org/zkoss/zul')) {
+                    labels.push(`need-zul.xsd`);
+                    labels.push(`need-change-stateless-as-well`);
+                    break;
+                }
+            }
             if (labels.length > 0) {
                 _actions_core__WEBPACK_IMPORTED_MODULE_0__.info(`Will add labels: ${labels}`);
                 octokit.issues.addLabels(Object.assign(Object.assign({}, _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repo), { issue_number: pr.number, labels: labels }));

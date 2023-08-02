@@ -1,6 +1,6 @@
 {
   "name": "check-pr-files",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Check a PR contains necessary files",
   "main": "dist/index.js",
   "scripts": {
